@@ -3,7 +3,7 @@ def day_trip_generator():
     tourist_destinations = ["Memphis", "Houston", "San Francisco", "Boston"]
     restaurant_types = ["Pizza Place", "Bar and Grill", "Seafood Sushi", "Wings n Things", "Surf and Turf", "Just Drinks for food"]
     transportation_type = ["Teleportation", "Walking", "A bus", " A Helicopter", "A personal Car", "A horse"]
-    entertainment_type = ["Karaoke bar", " Crazy Bar", "Arcade", "Night Hiking Event", "Wine Tasting Event", "The Comedy Show"]
+    entertainment_type = ["Karaoke bar", " Crazy Bar", "Arcade", "Night Hiking Event", "Wine Tasting Event", "Comedy Show"]
     
     users_name = input("Enter your name for a chance to take a trip: ")
     print(f"Hello {users_name}, you have been selected. Let's create your itinerary!")
@@ -65,14 +65,14 @@ def day_trip_generator():
         print(f'Here is what you selected; City: {city_choice}, Transportation: {transportation_choice}, Food: {food_choice}, and Entertainment: {entertainment_choice}.')
         yes_or_no = input(f"Do you like your itinerary? y or n?: ")
         if yes_or_no == "y":
-            print(f'Congrats {users_name}, you will be heading to {city_choice} next month. {transportation_choice} will be your method of Travel. You will have a free meal at the {food_choice}. Enjoy your night at the {entertainment_choice}')
+            print(f'Congrats {users_name}, you will be heading to {city_choice} next month. {transportation_choice} will be your method of Travel. You will have a free meal at the {food_choice} restuarant. Enjoy your night at the {entertainment_choice}')
             return
         print(f"My apologies {users_name}, lets try this one more time!")
         updated_city = users_city()
         updated_transportation = users_transportation()
         updated_food = users_food()
         updated_entertainment = users_entertainment()
-        print(f'Congrats {users_name}, you will be heading to {updated_city} next month. {updated_transportation} will be your method of Travel. You will have a free meal at the {updated_food}. Enjoy your night at the {updated_entertainment}')
+        print(f'Congrats {users_name}, you will be heading to {updated_city} next month. {updated_transportation} will be your method of Travel. You will have a free meal at the {updated_food} restuarant. Enjoy your night at the {updated_entertainment}')
         return
     finalize_trip() 
 

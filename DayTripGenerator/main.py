@@ -10,7 +10,7 @@ def day_trip_generator():
 
     def users_city():
         users_do_not_like_city = True
-
+        
         while users_do_not_like_city == True:
             for city in tourist_destinations:
              yes_or_no = input(f"Would you like to go to {city}? y or n?: ")
@@ -68,17 +68,12 @@ def day_trip_generator():
             print(f'Congrats {users_name}, you will be heading to {city_choice} next month. {transportation_choice} will be your method of Travel. You will have a free meal at the {food_choice}. Enjoy your night at the {entertainment_choice}')
             return
         print(f"My apologies {users_name}, lets try this one more time!")
-        # users_city()
         updated_city = users_city()
-        # users_transportation()
         updated_transportation = users_transportation()
-        # users_food()
         updated_food = users_food()
-        # users_entertainment()
         updated_entertainment = users_entertainment()
         print(f'Congrats {users_name}, you will be heading to {updated_city} next month. {updated_transportation} will be your method of Travel. You will have a free meal at the {updated_food}. Enjoy your night at the {updated_entertainment}')
         return
-        # finalize_trip()
     finalize_trip() 
 
 day_trip_generator()

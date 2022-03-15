@@ -1,3 +1,4 @@
+import random
 
 def day_trip_generator():
     tourist_destinations = ["Memphis", "Houston", "San Francisco", "Boston"]
@@ -10,54 +11,46 @@ def day_trip_generator():
 
     def users_city():
         users_do_not_like_city = True
-        
         while users_do_not_like_city == True:
-            for city in tourist_destinations:
-             yes_or_no = input(f"Would you like to go to {city}? y or n?: ")
+             yes_or_no = input(f"Would you like to go to {random.choice(tourist_destinations)}? y or n?: ")
              if yes_or_no == "y":
                 users_do_not_like_city = False
-                users_city_choice = city
-                print(f"Awesome! You will be heading to {city}!")
+                users_city_choice = random.choice(tourist_destinations)
+                print(f"Awesome! You will be heading to {users_city_choice}!")
                 return users_city_choice
-            users_do_not_like_city = True
+             users_do_not_like_city = True
     city_choice = users_city()
 
     def users_transportation():
-        users_do_not_like_transportation = True
-        
+        users_do_not_like_transportation = True       
         while users_do_not_like_transportation == True:
-            for travel_method in transportation_type:
-             yes_or_no = input(f"Would you like to travel by {travel_method.lower()}? y or n?: ")
+             yes_or_no = input(f"Would you like to travel by {random.choice(transportation_type)}? y or n?: ")
              if yes_or_no == "y":
                 users_do_not_like_transportation = False
-                users_transportation_choice = travel_method
-                print(f"Great choice! You will be traveling by {travel_method.lower()}!")
+                users_transportation_choice = random.choice(transportation_type)
+                print(f"Great choice! You will be traveling by {random.choice(transportation_type)}!")
                 return users_transportation_choice
     transportation_choice = users_transportation()       
             
     def users_food():
         users_do_not_like_restuarant = True
-        
         while users_do_not_like_restuarant == True:
-            for food in restaurant_types:
-             yes_or_no = input(f"Would you like to eat at the {food} restuarant? y or n?: ")
+             yes_or_no = input(f"Would you like to eat at the {random.choice(restaurant_types)} restuarant? y or n?: ")
              if yes_or_no == "y":
                 users_do_not_like_restuarant = False
-                users_food_choice = food
-                print(f"Stellar! You will be eating at the {food} restaruant!")
+                users_food_choice = random.choice(restaurant_types)
+                print(f"Stellar! You will be eating at the {random.choice(restaurant_types)} restaruant!")
                 return users_food_choice
     food_choice = users_food()
 
     def users_entertainment():
         users_do_not_like_entertainment = True
-        
         while users_do_not_like_entertainment == True:
-            for activity in entertainment_type:
-             yes_or_no = input(f"Do you like the {activity}? y or n?: ")
+             yes_or_no = input(f"Do you like the {random.choice(entertainment_type)}? y or n?: ")
              if yes_or_no == "y":
                 users_do_not_like_entertainment = False
-                users_entertainment_choice = activity
-                print(f"Fantastic! {activity} will be added to your itinerary!")
+                users_entertainment_choice = random.choice(entertainment_type)
+                print(f"Fantastic! {random.choice(entertainment_type)} will be added to your itinerary!")
                 return users_entertainment_choice
     entertainment_choice = users_entertainment()
 

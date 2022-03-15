@@ -8,8 +8,6 @@ def day_trip_generator():
     users_name = input("Enter your name for a chance to take a trip: ")
     print(f"Hello {users_name}, you have been selected. Let's create your itinerary!")
 
-
-
     def users_city():
         users_do_not_like_city = True
 
@@ -81,9 +79,7 @@ def day_trip_generator():
         print(f'Congrats {users_name}, you will be heading to {updated_city} next month. {updated_transportation} will be your method of Travel. You will have a free meal at the {updated_food}. Enjoy your night at the {updated_entertainment}')
         return
         # finalize_trip()
-    finalize_trip()
-
-    
+    finalize_trip() 
 
 day_trip_generator()
 
